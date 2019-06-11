@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -30,4 +35,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.editor {
+    width: 500px;
+    margin: 24px auto;
+}
+canvas {
+    border: 1px solid #000;
+}
+.range {
+    width: 500px;
 }
