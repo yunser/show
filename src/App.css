@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 .App {
   text-align: center;
@@ -46,4 +47,15 @@ canvas {
 }
 .range {
     width: 500px;
+}
+
+
+.videoList {
+    display: flex;
+}
+.videoItem {
+    padding: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #000;
 }
