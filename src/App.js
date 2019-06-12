@@ -69,7 +69,7 @@ let videos = [
                         x: r + padding,
                         y: r + padding,
                     }
-                    
+
 
                     let myTime = progress - 0.1
                     let myTotal = 0.6
@@ -85,7 +85,7 @@ let videos = [
                     let x = center.x + radius * Math.cos(angle * Math.PI / 180)
                     let y = center.y + radius * Math.sin(angle * Math.PI / 180)
 
-                    
+
                     ctx.beginPath()
                     ctx.strokeStyle = COLOR_BLUE
                     ctx.lineWidth = 4
@@ -297,10 +297,10 @@ let videos = [
                     }
                     // drawDot(rotateCenter.x, rotateCenter.y)
                     // 底
-                    
 
-                    
-                    
+
+
+
 
                     function getRotatePt(pt) {
                         return {
@@ -414,15 +414,6 @@ let videos = [
                         angle += 360
                     }
 
-                    let center = {
-                        x: 100,
-                        y: 240
-                    }
-                    let radius = 30
-
-                    let x = center.x + radius * Math.cos(angle * Math.PI / 180)
-                    let y = center.y + radius * Math.sin(angle * Math.PI / 180)
-
 
                     const COLOR_RED = '#ea4335'
                     const COLOR_YELLOW = '#fbbc05'
@@ -436,9 +427,8 @@ let videos = [
                     // ctx.globalAlpha = 1
 
                     ctx.fillStyle = COLOR_YELLOW
-                    drawDot(center.x, center.y)
+                    // drawDot(center.x, center.y)
 
-                    let length = 2 * Math.PI * radius
                     // ctx.beginPath()
                     // ctx.strokeStyle = COLOR_YELLOW
                     // ctx.lineWidth = 4
@@ -447,32 +437,13 @@ let videos = [
                     // ctx.stroke()
 
                     ctx.fillStyle = '#09c'
-                    let center2 = {
-                        x: center.x + length * myProgress,
-                        y: center.y
-                    }
-                    // drawDot(center2.x, center.y)
-                    // 铺平的线
-                    // ctx.beginPath()
-                    // ctx.strokeStyle = COLOR_RED
-                    // ctx.lineWidth = 4
-                    // ctx.moveTo(center.x, center.y + radius)
-                    // ctx.lineTo(center2.x, center2.y + radius)
-                    // ctx.stroke()
-                    // // 剩下的圆
-                    // ctx.beginPath()
-                    // ctx.strokeStyle = COLOR_RED
-                    // ctx.lineWidth = 4
-                    // let endAngle2 = 0.5 - 2 * (1 - myProgress)
-                    // ctx.arc(center2.x, center2.y, radius, 0.5 * Math.PI, endAngle2 * Math.PI, true)
-                    // ctx.stroke()
 
-                    let width = 120
-                    let height = 60
-                    let offset = 20
+                    let width = 240
+                    let height = 120
+                    let offset = 60
                     let pt1 = {
-                        x: 300,
-                        y: 200
+                        x: 100,
+                        y: 100
                     }
                     let pt2 = {
                         x: pt1.x + width,
@@ -606,7 +577,7 @@ let videos = [
 class App extends React.Component {
 
     state = {
-        curVideoIndex: 2,
+        curVideoIndex: 3,
         progress: 0.3,
         time: '00:00',
         message: 'Hello Vue!',
@@ -695,7 +666,7 @@ class App extends React.Component {
 
 
         let objects = videos[curVideoIndex].objects
-        
+
 
         let totalDuration = 0
         for (let i = 0; i < objects.length; i++) {
